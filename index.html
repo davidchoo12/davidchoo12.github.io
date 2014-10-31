@@ -2,52 +2,51 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <title>Revisions Bookstore and Cafe</title>
-    <style type="text/css">
-    @font-face {
-      font-family: 'ChunkFiveRegular';
-      src: url('Chunkfive-webfont.eot');
-      src: local('☺'), url('Chunkfive-webfont.woff') format('woff'), url('Chunkfive-webfont.ttf') format('truetype'), url('Chunkfive-webfont.svg#webfontb5K2fJwj') format('svg');
-      font-weight: normal;
-      font-style: normal;
-    }
-    h1 {
-      font-family: ChunkFiveRegular;
-      text-align: center;
-      border: 0.1em solid rgb(65,105,225);
-      width: 15.5em;
-      margin: 0 auto;
-      padding: 0.25em;
-      background: rgb(189,204,212);
-    }
-    #contact {
-      font-family: ChunkFiveRegular;
-      text-align: right;
-      width: 30em;
-      margin: 0 auto;
-      padding: 1em;
-      color: white;
-      background: black;
-    }
-    #box {
-     width: 31em;
-     margin: 0 auto;
-     padding: 0.5em;
-     font-weight: normal;
-     font-size: 1em;
-   }
-   .maintext {
-    text-align: left;
-  }
+    <link type="text/css" rel="stylesheet" media="screen" href="revision.css" />
+    <link type="text/css" rel="stylesheet" media="print" href="revprint.css" />
+    <style>
+      #map-canvas {
+        height: 1000px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px
+      }
     </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+var map;
+function initialize() {
+  var mapOptions = {
+    zoom: 15,
+    center: new google.maps.LatLng(1.3094585,103.7797214)
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
   </head>
-  <body style="font-family : verdana;">
+  <body>
+    <a id="skipnav" href="http://www.google.com/q=skip+navigation">Skip Navigation</a>
     <h1>Revisions Bookstore and Cafe</h1>
+    <div id="mainnav">
+      <p>
+        <a href="https://www.google.com/q=home">Home</a> |
+        <a href="https://www.google.com/q=store+history">Store History</a> |
+        <a href="https://www.google.com/q=upcoming+events">Upcoming Events</a> |
+        <a href="#map">Location</a>
+      </p>
+    </div>
     <div id="box">
-      <p class="maintext">Custom brewed coffee and hand-selected books.</p>
-      <p class="maintext">Special orders are our specialty.</p>
+      <p>Custom brewed coffee and hand-selected books.</p>
+      <p>Special orders are our specialty.</p>
     </div>
       <p id="contact">412 N. 25th St.<br />Richmond, VA 23223<br />(804) 555-2565</p>
-    <p>David Choo HTML5 Unit D, Visual Workshop</p>
+      <a id="map"></a>
+      <div id="map-canvas"></div>
   </body>
 </html>
