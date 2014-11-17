@@ -1,0 +1,109 @@
+/*html {
+	width: 1280px;
+}*/
+html, body, div, span, img {
+	margin: 0px;
+	padding: 0px;
+}
+#part1 span {
+	position: relative;
+	margin-left: auto;
+	margin-top: 5%;
+	font-family: "Source Sans Pro", adobe-clean;
+	font-size: 160px;
+	font-weight: lighter;
+	/*font-family: Helvetica;*/
+	color: white;
+	-webkit-font-stretch: condensed;
+}
+#D:hover {
+	color: #FF0000;
+}
+#a:hover {
+	color: #FF7A00;
+}
+#v:hover {
+	color: #FFFF00;
+}
+#i:hover {
+	color: #7AFF00;
+}
+#d:hover {
+	color: #00FF00;
+}
+#nbsp:hover {
+	background-color: #00FF7A;
+}
+#C:hover {
+	color: #00FFFF;
+}
+#h:hover {
+	color: #007AFF;
+}
+#o1:hover {
+	color: #0000FF;
+}
+#o2:hover {
+	color: #7A00FF;
+}
+#scrollBtnContainer {
+	position: absolute;
+	left: 50%;
+	margin-left: -42px;
+	/*margin-right: auto;*/
+	bottom: 10%;
+	/*vertical-align: baseline;*/
+	height:40px;
+	display: inline;
+}
+#scrollBtn {
+	position: relative;
+	-webkit-animation-name: moveThis;
+	-webkit-animation-duration:0.8s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+@-webkit-keyframes moveThis {
+  0% {top:0;}
+  50% {top:8px;}
+  100% {top:0;}
+}
+.navBar {
+	height: 60px;
+	width: 100%;
+	color: white;
+	background-color: white;
+	display: none;
+	/*z-index: 2;*/
+	position: fixed;
+	top: 0px;
+}
+.scrollToTop{
+	width:50px; 
+	height:50px;
+	padding:10px; 
+	text-align:center; 
+	background: whiteSmoke;
+	font-weight: bold;
+	color: #444;
+	text-decoration: none;
+	position:fixed;
+	bottom:65px;
+	right:40px;
+	display:none;
+	background: url('backToTop.png') no-repeat 0px 20px;
+}
+.scrollToTop:hover{
+	text-decoration:none;
+}
+#part1 {
+background: url('part1bg.jpg');
+	background-size: 100% 100%;
+	text-align: center;
+}
+#part2 {
+background: green;
+}
+#part3 {
+background: blue;
+}
