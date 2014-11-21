@@ -22,7 +22,7 @@ $(document).ready(function(){
 	var viewportHeight = window.innerHeight;
 	var percentOffset = window.innerHeight * 55 / 100;
 	$(".backgroundImg").height(window.innerHeight + percentOffset + 10);
-	$(".backgroundImg").css('margin-top', -percentOffset);
+	$(".backgroundImg").css('top', -percentOffset);
 	// when top of element at the bottom of the viewport
 	$(".backgroundImg").attr("data-bottom-top","transform: translateY(" + (-percentOffset) + "px)");
 	// $(".backgroundImg").attr("data-top-top","transform: translateY(0px)");

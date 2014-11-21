@@ -43,7 +43,8 @@ html, body, div, span, img {
 	height: 60px;
 	width: 100%;
 	color: white;
-	background-color: white;
+	opacity: 50%;
+	/*background-color: white;*/
 	display: none;
 	z-index: 100;
 	position: fixed;
@@ -68,30 +69,17 @@ html, body, div, span, img {
 	text-decoration:none;
 }
 .backgroundImg {
-	width: 100%;
+	    position: absolute;
+    left: -9999px;
+    right: -9999px;
+    margin: 0 auto;
+	/*height: 100%;*/
 	/*margin-top: -500px;*/
 }
-#part1 {
-	/*background: url('part1bg.jpg');*/
-	/*background-size: 100% 100%;*/
-	/*background-color: black;*/
-	/*height: 100%;*/
-	/*background-size: 100% 100%;*/
-	/*text-align: center;*/
-	/*z-index: 5;*/
+.slide {
+	position: relative;
 	overflow: hidden;
 }
-
-#part2 {
-/*background: green;
-z-index: 100;*/
-overflow: hidden;
-}
-
-#part3 {
-	overflow: hidden;
-}
-
 
 /*
 .parallax {
