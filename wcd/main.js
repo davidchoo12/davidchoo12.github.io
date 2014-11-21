@@ -24,12 +24,15 @@ $(document).ready(function(){
 	$(".backgroundImg").height(window.innerHeight + percentOffset + 10);
 	$(".backgroundImg").css('top', -percentOffset);
 	// when top of element at the bottom of the viewport
-	$(".backgroundImg").attr("data-bottom-top","transform: translateY(" + (-percentOffset) + "px)");
+	$(".backgroundImg").attr("data-bottom-top","-webkit-transform: translateY(" + (-percentOffset) + "px)");
 	// $(".backgroundImg").attr("data-top-top","transform: translateY(0px)");
 	// when bottom of element at the top of viewport
-	$(".backgroundImg").attr("data-top-bottom", "transform: translateY(" + percentOffset + "px)");
+	$(".backgroundImg").attr("data-top-bottom", "-webkit-transform: translateY(" + percentOffset + "px)");
 	$("#part3 .backgroundImg").removeAttr("data-top-bottom");
-	$("#part3 .backgroundImg").attr("data-top-top","transform: translateY(0px)");
+	$("#part3 .backgroundImg").attr("data-top-top","-webkit-transform: translateY(0px)");
+	$(".navBar").attr("data-bottom-bottom", "opacity: 0.2;");
+	$(".navBar").attr("data--1-top-top", "opacity: 0.4;");
+	// $(".navBar").attr("data-1-top-top", "position:fixed;");
 	var s = skrollr.init({
 		forceHeight: true,
 		smoothScrolling: true
@@ -37,12 +40,13 @@ $(document).ready(function(){
 	
 	//Check to see if the window is top if not then display button
 	$(window).scroll(function(){
-		if ($(this).scrollTop() > window.innerHeight - document.getElementById("navigationBar").style.height) {
+		if ($(this).scrollTop() > window.innerHeight - $("#navigationBar").height()) {
 			$('.scrollToTop').fadeIn();
-			$('.navBar').fadeIn();
+			$('.navBar').css({"position":"fixed", "top":"0px"});
 		} else {
 			$('.scrollToTop').fadeOut();
-			$('.navBar').fadeOut();
+			$('.navBar').removeAttr("top");
+			$('.navBar').css({"position":"absolute", "top":"auto", "bottom":"0px"});
 		}
 	});
 
