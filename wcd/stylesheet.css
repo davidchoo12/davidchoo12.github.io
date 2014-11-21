@@ -5,46 +5,17 @@ html, body, div, span, img {
 	margin: 0px;
 	padding: 0px;
 }
-#part1 span {
-	position: relative;
-	margin-left: auto;
-	margin-top: 5%;
+#titleContainer {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 10%;
 	font-family: "Source Sans Pro", adobe-clean;
 	font-size: 160px;
 	font-weight: lighter;
 	/*font-family: Helvetica;*/
 	color: white;
 	-webkit-font-stretch: condensed;
-}
-#D:hover {
-	color: #FF0000;
-}
-#a:hover {
-	color: #FF7A00;
-}
-#v:hover {
-	color: #FFFF00;
-}
-#i:hover {
-	color: #7AFF00;
-}
-#d:hover {
-	color: #00FF00;
-}
-#nbsp:hover {
-	background-color: #00FF7A;
-}
-#C:hover {
-	color: #00FFFF;
-}
-#h:hover {
-	color: #007AFF;
-}
-#o1:hover {
-	color: #0000FF;
-}
-#o2:hover {
-	color: #7A00FF;
 }
 #scrollBtnContainer {
 	position: absolute;
@@ -74,7 +45,7 @@ html, body, div, span, img {
 	color: white;
 	background-color: white;
 	display: none;
-	/*z-index: 2;*/
+	z-index: 100;
 	position: fixed;
 	top: 0px;
 }
@@ -96,14 +67,78 @@ html, body, div, span, img {
 .scrollToTop:hover{
 	text-decoration:none;
 }
+.backgroundImg {
+	width: 100%;
+	/*margin-top: -500px;*/
+}
 #part1 {
-background: url('part1bg.jpg');
-	background-size: 100% 100%;
-	text-align: center;
+	/*background: url('part1bg.jpg');*/
+	/*background-size: 100% 100%;*/
+	/*background-color: black;*/
+	/*height: 100%;*/
+	/*background-size: 100% 100%;*/
+	/*text-align: center;*/
+	/*z-index: 5;*/
+	overflow: hidden;
 }
+
 #part2 {
-background: green;
+/*background: green;
+z-index: 100;*/
+overflow: hidden;
 }
+
 #part3 {
-background: blue;
+	overflow: hidden;
 }
+
+
+/*
+.parallax {
+    height: 500px; 
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+  }
+
+  .parallax__group {
+    position: relative;
+    height: 500px; 
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
+
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
+
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
+
+  .parallax__layer--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+  }*/

@@ -10,83 +10,42 @@
 
     
     <link rel="stylesheet" type="text/css" href="css/animate.css" />
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
   </head>
   <body>
   	<nav id="navigationBar" class="navBar">
   	</nav>
     
-  	<div id="part1">
-      <div>
-        <!--span id="D">D</span>
-        <span id="a">a</span>
-        <span id="v">v</span>
-        <span id="i">i</span>
-        <span id="d">d</span>
-        <span id="nbsp">&nbsp;</span>
-        <span id="C">C</span>
-        <span id="h">h</span>
-        <span id="o1">o</span>
-        <span id="o2">o</span-->
-          <span id="title" data-in-effect="fadeInLeft">David Choo</span>
-      </div>
-      <a id="scrollBtnContainer">
-    		<img id="scrollBtn" src="scroll_btn.png" alt="Scroll" />
-      </a>
+  	<div id="part1" class="slide">
+      <img src="part1bg.jpg" class="backgroundImg" data-anchor-target="#part1"/>
+          <div id="titleContainer">
+            <span id="title" data-in-effect="fadeInLeft" data-out-effect="fadeOutRight">David Choo</span>
+          </div>
+      
+        <a id="scrollBtnContainer">
+      		<img id="scrollBtn" src="scroll_btn.png" alt="Scroll" />
+        </a>
   	</div>
-  	<div id="part2">
+    
+  	<div id="part2" class="slide">
+      <img src="part2bg.jpg" class="backgroundImg" data-anchor-target="#part2"/>
   	</div>
-	<div id="part3">
+	  <div id="part3" class="slide">
+      <img src="part3bg.jpg" class="backgroundImg" data-anchor-target="#part3"/>
   	</div>
   	<img src="backToTop.png" class="scrollToTop" />
 
 
-  	<script type="text/javascript">
-      document.getElementById("part1").style.height = window.innerHeight + "px";
-      document.getElementById("part2").style.height = window.innerHeight + "px";
-      document.getElementById("part3").style.height = window.innerHeight + "px";
-  	</script>
-  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  	<script type="text/javascript">
-    $(document).ready(function(){
-
-	//Check to see if the window is top if not then display button
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > window.innerHeight - document.getElementById("navigationBar").style.height) {
-			$('.scrollToTop').fadeIn();
-			$('.navBar').fadeIn();
-		} else {
-			$('.scrollToTop').fadeOut();
-			$('.navBar').fadeOut();
-		}
-	});
-	
-	//Click event to scroll to top
-	$('.scrollToTop').click(function(){
-		$('html, body').animate({scrollTop : 0},800);
-		return false;
-	});
-	
-});
-  	</script>
-    
-
-<!--script src="js/jquery.fittext.js"></script-->
-
-<!--script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script-->
-
-<!--script>hljs.initHighlightingOnLoad();</script-->
-
-<!-- animate texts -->
+  	<!--script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
+  	
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- 
+<script src="https://raw.githubusercontent.com/Prinzhorn/skrollr/master/dist/skrollr.min.js"></script> -->
 <script src="js/jquery.lettering.js"></script>
 <script src="js/jquery.textillate.js"></script>
-<script type="text/javascript">
-  $(function () {
-    $('#title').textillate();
-})
-</script>
-
-
+<script src="js/skrollr.min.js"></script>
+<script src="main.js"></script>
   </body>
 </html>
