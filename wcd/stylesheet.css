@@ -1,9 +1,10 @@
 /*html {
-	width: 1280px;
+	width: 100%;
 }*/
-html, body, div, span, img {
+html, body, div, p, img {
 	margin: 0px;
 	padding: 0px;
+	font-family: Arial;
 }
 body {
 	/*overflow: hidden;*/
@@ -20,20 +21,20 @@ body {
 	color: white;
 	-webkit-font-stretch: condensed;
 }
-#scrollBtnContainer {
+.scrollBtnContainer {
 	position: absolute;
 	left: 50%;
 	margin-left: -42px;
 	/*margin-right: auto;*/
-	bottom: 10%;
+	bottom: 15%;
 	/*vertical-align: baseline;*/
 	height:40px;
 	display: inline;
 }
-#scrollBtnContainer:hover {
+.scrollBtnContainer:hover {
 	cursor: pointer;
 }
-#scrollBtn {
+.scrollBtn {
 	position: relative;
 	-webkit-animation-name: moveThis;
 	-webkit-animation-duration:0.8s;
@@ -82,7 +83,7 @@ body {
 	background-color: black;
 	color: white;
 }
-.scrollToTop{
+/*.scrollToTop{
 	width:50px; 
 	height:50px; 
 	text-align:center;
@@ -97,27 +98,89 @@ body {
 }
 .scrollToTop:hover{
 	cursor: pointer;
-}
+}*/
 .backgroundImg {
 	    position: absolute;
     left: -9999px;
     right: -9999px;
     margin: 0 auto;
     min-width: 100%;
-	/*height: 100%;*/
-	/*margin-top: -500px;*/
+	-webkit-filter: blur(2px);
 }
 .slide {
 	position: relative;
 	overflow: hidden;
 }
+.slide p, .slide ul {
+	color: white;
+	font-family: "Helvetica";
+	font-size: 1.2em;
+	background-color: rgba(0,0,0,0.5);
+	display: inline;
+	cursor: default;
+}
+p .heading {
+	font-size: 1.6em;
+}
+p .footnote {
+	font-size: 0.8em;
+}
+#part2 p {
+	position: absolute;
+	width: 50%;
+	left: 40%;
+	top: 15%;
+	padding: 0.5em;
+	opacity: 1;
+}
+#part3 p {
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	width: 50%;
+	left: 20%;
+	top: 20%;
+	opacity: 1;
+	padding: 0.5em;
+	display: block;
+}
+#part3 ul {
+	position: relative;
+	display: block;
+	background-color: rgba(0,0,0,0);
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+#part3 ul li {
+	width: 60%;
+	margin: 0px;
+	/*display: inline-block;*/
+}
+
 footer {
 	height: 40px;
 	background-color: black;
 	color: white;
 	text-align: center;
+	line-height: 40px;
 	font-family: "Helvetica", "Arial", sans-serif;
 	display: none;
+}
+#jsLibs {
+	float: right;
+	display: inline;
+	position: relative;
+	right: 0px;
+	/*width: 32%;*/
+	height: inherit;
+	/*background-color: rgba(255,255,255,0.5);*/
+}
+.jsLogo {
+	height: 30px;
+	vertical-align: middle;
+	margin-left: 5px;
+	-webkit-filter: blur(0px);
+	-webkit-filter: drop-shadow(1px 1px 1px #fff);
+	filter: drop-shadow(1px 1px 1px #fff);
 }
 ::-webkit-scrollbar {
     width: 12px;

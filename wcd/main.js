@@ -33,6 +33,8 @@ $(document).ready(function(){
 	$("#part3 .backgroundImg").attr("data-top-top","-webkit-transform: translateY(0px)");
 	$(".navBar").attr("data-bottom-bottom", "background-color: rgba(0,0,0,0.1)");
 	$(".navBar").attr("data-top-top", "background-color: rgba(0,0,0,0.5)");
+	// $("p").attr("data-bottom-center", "-webkit-transform: translateX(0px); opacity: 0;");
+	// $("p").attr("data-center-center", "-webkit-transform: translateX(50px); opacity: 1;");
 	// $(".navBar").attr("data-1-top-top", "position:fixed;");
 	var s = skrollr.init({
 		forceHeight: true,
@@ -42,30 +44,30 @@ $(document).ready(function(){
 	//Check to see if the window is top if not then display button
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > viewportHeight - $("#navigationBar").height()) {
-			$('.scrollToTop').fadeIn();
+			$('#scrollUp').fadeIn();
 			$('.navBar').css({"position":"fixed", "top":"0px"});
 		} else {
-			$('.scrollToTop').fadeOut();
+			$('#scrollUp').fadeOut();
 			$('.navBar').removeAttr("top");
 			$('.navBar').css({"position":"absolute", "top":"auto", "bottom":"0px"});
 		}
 	});
 
 	//Click event to scroll to top
-	$('.scrollToTop').click(function(){
+	$('#scrollUp').click(function(){
 		$('html, body').animate({scrollTop : 0},1000);
 		return false;
 	});
 	//Click event to scroll bottom
-	$('#scrollBtnContainer').click(function(){
+	$('#scrollDown').click(function(){
 		$('html, body').animate({scrollTop : $(document).height()-viewportHeight},8000);
 		return false;
 	});
-	
 });
 
 
 $(function () {
 	$('#title').textillate();
+	// $('p').css({'display':'inline'});
 	$('footer').show();
 })
