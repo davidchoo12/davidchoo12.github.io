@@ -30,6 +30,9 @@ body {
 	height:40px;
 	display: inline;
 }
+#scrollBtnContainer:hover {
+	cursor: pointer;
+}
 #scrollBtn {
 	position: relative;
 	-webkit-animation-name: moveThis;
@@ -43,33 +46,57 @@ body {
   100% {top:0;}
 }
 .navBar {
-	height: 60px;
+	height: 50px;
 	width: 100%;
-	color: white;
+	/*color: white;*/
 	/*opacity: 50%;*/
-	background-color: black;
+	/*background-color: black;*/
 	/*display: none;*/
 	z-index: 100;
 	position: absolute;
 	bottom: 0px;
 }
+.navBar ul {
+	display: block;
+	/*background: inherit;*/
+	margin: 0;
+}
+.navBar li {
+	display: inline-block;
+	list-style-type: none;
+	padding: 0 2em;
+}
+.navBar a {
+	font-family: "Source Sans Pro", adobe-clean;
+	color: rgba(255,255,225, 0.6);
+	/*background-color: black;*/
+	font-size: 1.5em;
+	text-decoration: none;
+	display: block;
+	overflow: visible;
+	line-height: 20px;
+	padding: 15px 10px;
+	transition: all 0.5s ease;
+}
+.navBar a:hover {
+	background-color: black;
+	color: white;
+}
 .scrollToTop{
 	width:50px; 
-	height:50px;
-	padding:10px; 
-	text-align:center; 
-	background: whiteSmoke;
+	height:50px; 
+	text-align:center;
 	font-weight: bold;
 	color: #444;
 	text-decoration: none;
 	position:fixed;
 	bottom:65px;
-	right:40px;
+	right:65px;
 	display:none;
-	background: url('backToTop.png') no-repeat 0px 20px;
+	background: none;
 }
 .scrollToTop:hover{
-	text-decoration:none;
+	cursor: pointer;
 }
 .backgroundImg {
 	    position: absolute;
@@ -84,53 +111,24 @@ body {
 	position: relative;
 	overflow: hidden;
 }
-
-/*
-.parallax {
-    height: 500px; 
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 300px;
-    perspective: 300px;
-  }
-
-  .parallax__group {
-    position: relative;
-    height: 500px; 
-    height: 100vh;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  .parallax__layer--fore {
-    -webkit-transform: translateZ(90px) scale(.7);
-    transform: translateZ(90px) scale(.7);
-    z-index: 1;
-  }
-
-  .parallax__layer--base {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    z-index: 4;
-  }
-
-  .parallax__layer--back {
-    -webkit-transform: translateZ(-300px) scale(2);
-    transform: translateZ(-300px) scale(2);
-    z-index: 3;
-  }
-
-  .parallax__layer--deep {
-    -webkit-transform: translateZ(-600px) scale(3);
-    transform: translateZ(-600px) scale(3);
-    z-index: 2;
-  }*/
+footer {
+	height: 40px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-family: "Helvetica", "Arial", sans-serif;
+	display: none;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
