@@ -15,7 +15,7 @@ body {
 	text-align: center;
 	top: 10%;
 	font-family: "Source Sans Pro", adobe-clean;
-	font-size: 10em;
+	font-size: 1000%;
 	font-weight: lighter;
 	/*font-family: Helvetica;*/
 	color: white;
@@ -105,7 +105,7 @@ body {
     right: -9999px;
     margin: 0 auto;
     min-width: 100%;
-	-webkit-filter: blur(2px);
+	-webkit-filter: blur(1.5px);
 }
 .slide {
 	position: relative;
@@ -127,7 +127,7 @@ p .footnote {
 }
 #part2 p {
 	position: absolute;
-	width: 50%;
+	width: 600px;
 	left: 40%;
 	top: 15%;
 	padding: 0.5em;
@@ -136,7 +136,7 @@ p .footnote {
 #part3 p {
 	position: absolute;
 	background-color: rgba(0,0,0,0.5);
-	width: 50%;
+	width: 600px;
 	left: 20%;
 	top: 20%;
 	opacity: 1;

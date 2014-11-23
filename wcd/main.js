@@ -1,7 +1,11 @@
-
-
+var viewportHeight = window.innerHeight;
+var percentOffset = viewportHeight * 55 / 100;
+var bgimgHeight = viewportHeight + percentOffset + 20;
+var bgimgTop = -percentOffset;
 $(document).ready(function(){
-	var viewportHeight = window.innerHeight;
+	//smooth scrolling
+	ssc_init();
+
   	//resize divs according to viewport
   	// $("#part1").height(window.innerHeight);
   	$(".slide").height(viewportHeight);
@@ -19,9 +23,7 @@ $(document).ready(function(){
 	// });
 
 	//parallax scrolling effects
-	var percentOffset = viewportHeight * 55 / 100;
-	var bgimgHeight = viewportHeight + percentOffset + 10;
-	var bgimgTop = -percentOffset;
+
 	$(".backgroundImg").height(bgimgHeight);
 	$(".backgroundImg").css('top', bgimgTop);
 	// when top of element at the bottom of the viewport
@@ -31,23 +33,21 @@ $(document).ready(function(){
 	$(".backgroundImg").attr("data-top-bottom", "-webkit-transform: translateY(" + percentOffset + "px)");
 	$("#part3 .backgroundImg").removeAttr("data-top-bottom");
 	$("#part3 .backgroundImg").attr("data-top-top","-webkit-transform: translateY(0px)");
-	$(".navBar").attr("data-bottom-bottom", "background-color: rgba(0,0,0,0.1)");
-	$(".navBar").attr("data-top-top", "background-color: rgba(0,0,0,0.5)");
+	// $(".navBar").attr("data-bottom-bottom", "background-color: rgba(0,0,0,0.1)");
+	// $(".navBar").attr("data-top-top", "background-color: rgba(0,0,0,0.5)");
 	// $("p").attr("data-bottom-center", "-webkit-transform: translateX(0px); opacity: 0;");
 	// $("p").attr("data-center-center", "-webkit-transform: translateX(50px); opacity: 1;");
 	// $(".navBar").attr("data-1-top-top", "position:fixed;");
 	var s = skrollr.init({
-		forceHeight: true,
+		// forceHeight: true,
 		smoothScrolling: true
 	});
 	
-	//Check to see if the window is top if not then display button
+	//set nav bar to top when its top touches the top of viewport
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > viewportHeight - $("#navigationBar").height()) {
-			$('#scrollUp').fadeIn();
 			$('.navBar').css({"position":"fixed", "top":"0px"});
 		} else {
-			$('#scrollUp').fadeOut();
 			$('.navBar').removeAttr("top");
 			$('.navBar').css({"position":"absolute", "top":"auto", "bottom":"0px"});
 		}
@@ -55,7 +55,7 @@ $(document).ready(function(){
 
 	//Click event to scroll to top
 	$('#scrollUp').click(function(){
-		$('html, body').animate({scrollTop : 0},1000);
+		$('html, body').animate({scrollTop : 0},2000);
 		return false;
 	});
 	//Click event to scroll bottom
@@ -71,3 +71,4 @@ $(function () {
 	// $('p').css({'display':'inline'});
 	$('footer').show();
 })
+
