@@ -63,12 +63,29 @@ $(document).ready(function(){
 		$('html, body').animate({scrollTop : $(document).height()-viewportHeight},8000);
 		return false;
 	});
+	$('footer').show();
 });
 
 
 $(function () {
 	$('#title').textillate();
 	// $('p').css({'display':'inline'});
-	$('footer').show();
 })
 
+$(function(){
+				jQuery('.social-icon').on( 'mouseenter', function(e){
+					jQuery(this).closest('.social').addClass('open');
+				} );
+				jQuery('.social-icon').on( 'click', function(e){
+					e.preventDefault();
+					if( jQuery(this).closest('.social').hasClass('clicked') ){
+						console.log('neil');
+						jQuery(this).closest('.social').removeClass('clicked');
+					}else{
+						jQuery(this).closest('.social').addClass('clicked');
+					}
+				} );
+				jQuery('.social').on( 'mouseleave', function(){
+					jQuery(this).closest('.social').removeClass('open');
+				} )
+			})
