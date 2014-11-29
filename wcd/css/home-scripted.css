@@ -1,0 +1,185 @@
+.titleContainer {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 10%;
+	font-family: "Source Sans Pro", adobe-clean;
+	font-size: 11vw;
+	font-weight: lighter;
+	/*font-family: Helvetica;*/
+	color: white;
+	-webkit-font-stretch: condensed;
+}
+.scrollBtnContainer {
+	position: absolute;
+	left: 50%;
+	margin-left: -42px;
+	/*margin-right: auto;*/
+	bottom: 15%;
+	/*vertical-align: baseline;*/
+	height:40px;
+	display: inline;
+}
+.scrollBtnContainer:hover {
+	cursor: pointer;
+}
+.scrollBtn {
+	position: relative;
+	-webkit-animation-name: moveThis;
+	-webkit-animation-duration:0.8s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+@-webkit-keyframes moveThis {
+  0% {top:0;}
+  50% {top:8px;}
+  100% {top:0;}
+}
+.navBar {
+	height: 50px;
+	width: 100%;
+	min-width: 1010px;
+	z-index: 100;
+	position: absolute;
+	top: auto;
+	bottom: 0px;
+}
+.navBar .social .social-icon {
+	cursor: default;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 26px;
+	vertical-align: middle;
+}
+.navBar .social .social-icon:before {
+	display: block;
+	width: 26px;
+	height: 30px;
+}
+.sprite-before:before{
+	background-image: url('../images/sprite-retina.png');
+	background-size: auto 100px;
+}
+.navBar .social .social-link { 
+	background: url('../images/social-sprite-retina.png') no-repeat; 
+	cursor: default;
+	display: inline-block; 
+	height: 36px; 
+	margin-left: 10px;
+	padding: 0px;
+	opacity: 0;
+	vertical-align: middle; 
+	width: 41px;
+	transition: opacity 1s; 
+	-webkit-transition: opacity 1s; 
+}
+.navBar .social .social-link { background-image: url('../images/social-sprite-retina.png'); background-size: auto 100px; }
+.navBar .social.open .social-link,
+.navBar .social.clicked .social-link {
+	opacity: 1;
+	cursor: pointer;
+}
+.navBar .social .share-email { background-position: 0px 0px; }
+.navBar .social .share-twitter { background-position: -50px 0px; }
+.navBar .social .share-facebook { background-position: -100px 0px; }
+.navBar .social .share-email:hover { background-position: 0px -50px; }
+.navBar .social .share-twitter:hover { background-position: -50px -50px; }
+.navBar .social .share-facebook:hover { background-position: -100px -50px; }
+.navBar .social .social-link:nth-child(3) { transition-delay-delay: 0s; -webkit-transition-delay: 0s; }
+.navBar .social .social-link:nth-child(2) { transition-delay-delay: .15s; -webkit-transition-delay: .15s; }
+.navBar .social .social-link:nth-child(1) { transition-delay-delay: .25s; -webkit-transition-delay: .25s; }
+.offscreen {
+	display: block;
+	left: -999999px;
+	position: absolute;
+	top: -999999px;
+}
+.before:before{
+	display: inline-block;
+	content: '';
+}
+.backgroundImg {
+	    position: absolute;
+    left: -9999px;
+    right: -9999px;
+    margin: 0 auto;
+    min-width: 100%;
+	height: calc(155% + 20px);
+	top: -55%;
+	-webkit-filter: blur(1.5px);
+}
+.slide {
+	position: relative;
+	overflow: hidden;
+}
+.slide p, .slide ul {
+	color: white;
+	font-family: "Helvetica";
+	font-size: 1.2em;
+	background-color: rgba(0,0,0,0.5);
+	display: inline;
+	cursor: default;
+}
+p .heading {
+	font-size: 1.6em;
+}
+p .footnote {
+	font-size: 0.8em;
+}
+#part2 p {
+	position: absolute;
+	width: 600px;
+	left: 40%;
+	top: 15%;
+	padding: 0.5em;
+	opacity: 1;
+}
+#part3 p {
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	width: 600px;
+	left: 20%;
+	top: 20%;
+	opacity: 1;
+	padding: 0.5em;
+	display: block;
+}
+#part3 ul {
+	position: relative;
+	display: block;
+	background-color: rgba(0,0,0,0);
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+#part3 ul li {
+	width: 60%;
+	margin: 0px;
+	/*display: inline-block;*/
+}
+
+footer {
+	height: 40px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	font-family: "Helvetica", "Arial", sans-serif;
+	display: none;
+}
+#jsLibs {
+	float: right;
+	display: inline;
+	position: relative;
+	right: 0px;
+	/*width: 32%;*/
+	height: inherit;
+	/*background-color: rgba(255,255,255,0.5);*/
+}
+.jsLogo {
+	height: 30px;
+	vertical-align: middle;
+	margin-left: 5px;
+	-webkit-filter: blur(0px);
+	-webkit-filter: drop-shadow(1px 1px 1px #fff);
+	filter: drop-shadow(1px 1px 1px #fff);
+}

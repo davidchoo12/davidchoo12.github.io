@@ -1,0 +1,138 @@
+html, body {
+	height: 100%;
+	color: #0c090a;
+}
+body {
+	background-color: lemonchiffon;
+}
+main {
+	min-width: 678px;
+	/*max-width: 1078px;*/
+	/*height: 100%;*/
+	padding-top: 55px;
+	margin: 0 20px;
+	/*background-color: aliceblue;*/
+	/*margin-bottom: 50px;*/
+	/*box-shadow: 0 5px 5px -1px rgba(0, 0, 0, 0.2);*/
+}
+main .form-section {
+	width: 60%;
+	min-width: 478px;
+	max-width: 678px;
+	margin-left: 100px;
+	display: inline-block;
+}
+.form-section h1 {
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+.form-section .form {
+	/*background: blue;*/
+	padding: 20px;
+	padding-top: 1px;
+}
+.form-section .form label {
+	display: block;
+	margin-top: 15px;
+}
+#name {
+	width: 300px;
+}
+#email {
+	width: 300px;
+}
+#title {
+	width: 500px;
+}
+#message {
+	width: 500px;
+	height: 150px;
+	resize: none;
+	display: block;
+}
+#no-form {
+	background-color: red;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	width: 506px;
+	margin: 0 20px;
+	display: none;
+}
+main .social-section {
+	position: relative;
+	float: right;
+	width: auto;
+	width: 30%;
+	min-width: 178px;
+	max-width: 378px;
+	display: inline-block;
+	height: 100%;
+	/*background-color: white;*/
+}
+#profile-image {
+	/*width: 100%;*/
+	height: 200px;
+	position: relative;
+	margin: 0 auto 20px auto;
+	display: block;
+}
+.card {
+  position: relative;
+  margin: 10px auto;
+  width: 100%;
+  height: 60px;
+  z-index: 1;
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+  box-shadow: 5px 5px 5px #aaa;
+}
+.card:hover {
+  transform: rotateX(180deg);
+  box-shadow: 5px -5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+.front {
+	text-align: center;
+}
+.front img {
+	height: 100%;
+}
+.face.back {
+  display: block;
+  transform: rotateX(180deg);
+  box-sizing: border-box;
+  /*padding: 10px;*/
+  color: white;
+  text-align: center;
+  padding: auto 0;
+}
+.back a {
+	position: relative;
+	top: 50%;
+  	transform: translateY(-50%);
+	display: block;
+	color: white;
+	text-decoration: none;
+}
+#em .front, #em .back {
+	background-color: gray;
+}
+#fb .front, #fb .back {
+	background-color: #3b5998;
+}
+#tw .front, #tw .back {
+	background-color: #00aced;
+}
+#gp .front, #gp .back {
+	background-color: #dd4b39;
+}
+#li .front, #li .back {
+	background-color: #007bb6;
+}
