@@ -28,71 +28,73 @@
         </a>
       </div>
     </nav>
+    <div class="social-section">
+      <img id="menu-icon" src="images/sidebar-icon.png" />
+      <img id="profile-image" src="images/contactme-profile.jpg" />
+      <p>Contact Details (hint: hover over each tile)</p>
+      <div class="social-media">
+        <div id="em" class="card">
+          <div class="front face">
+            <img src="images/email.png"/>
+          </div>
+          <div class="back face center">
+            <a href="mailto:davidchoo16@gmail.com">davidchoo16@gmail.com</a>
+          </div>
+        </div>
+        <div id="fb" class="card">
+          <div class="front face">
+            <img src="images/fb.png"/>
+          </div>
+          <div class="back face center">
+            <a href="http://fb.com/davidchoo123" target="_blank">fb.com/davidchoo123</a>
+          </div>
+        </div>
+        <div id="tw" class="card">
+          <div class="front face">
+            <img src="images/tw.png"/>
+          </div>
+          <div class="back face center">
+            <a href="http://twitter.com/davidchoo12" target="_blank">twitter.com/davidchoo12</a>
+          </div>
+        </div>
+        <div id="gp" class="card">
+          <div class="front face">
+            <img src="images/gp.png"/>
+          </div>
+          <div class="back face center">
+            <a href="http://plus.google.com/+DavidChoo12" target="_blank">plus.google.com/+DavidChoo12</a>
+          </div>
+        </div>
+        <div id="li" class="card">
+          <div class="front face">
+            <img src="images/li.png"/>
+          </div>
+          <div class="back face center">
+            <a href="http://sg.linkedin.com/pub/david-choo" target="_blank">sg.linkedin.com/pub/david-choo</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <main>
     	<div class="form-section">
     		<div class="form">
     			<h1>Leave a message!</h1>
     			Got any burning questions to ask or feedback for me? Leave a message! (form submission is not supported yet; haven't study PHP yet >.<)
-				<label for="name">Name</label>
-				<input type="text" id="name" /><br />
-				<label for="name">Email Address</label>
-				<input type="text" id="email" /><br />
-				<label for="name">Title</label>
-				<input type="text" id="title" /><br />
-				<label for="name">Message</label>
-				<textarea name="message" id="message" form="form"></textarea>
-				<input type="submit" id="submitBtn" onclick="displayNoForm();" />
+				  <label for="name">Name</label>
+				  <input type="text" id="name" /><br />
+				  <label for="name">Email Address</label>
+				  <input type="text" id="email" /><br />
+				  <label for="name">Title</label>
+				  <input type="text" id="title" /><br />
+				  <label for="name">Message</label>
+				  <textarea name="message" id="message" form="form"></textarea>
+				  <input type="submit" id="submitBtn" onclick="displayNoForm();" />
     		</div>
     		<p id="no-form">
     			Sorry, form submission is not supported yet.
     		</p>
     	</div>
-    	<div class="social-section">
-    		<img id="profile-image" src="images/contactme-profile.jpg" />
-    		<p>Contact Details (hint: hover over each tile)</p>
-    		<div class="social-media">
-				<div id="em" class="card">
-					<div class="front face">
-						<img src="images/email.png"/>
-					</div>
-					<div class="back face center">
-						<a href="mailto:davidchoo16@gmail.com">davidchoo16@gmail.com</a>
-					</div>
-				</div>
-				<div id="fb" class="card">
-					<div class="front face">
-						<img src="images/fb.png"/>
-					</div>
-					<div class="back face center">
-						<a href="http://fb.com/davidchoo123" target="_blank">fb.com/davidchoo123</a>
-					</div>
-				</div>
-				<div id="tw" class="card">
-					<div class="front face">
-						<img src="images/tw.png"/>
-					</div>
-					<div class="back face center">
-						<a href="http://twitter.com/davidchoo12" target="_blank">twitter.com/davidchoo12</a>
-					</div>
-				</div>
-				<div id="gp" class="card">
-					<div class="front face">
-						<img src="images/gp.png"/>
-					</div>
-					<div class="back face center">
-						<a href="http://plus.google.com/+DavidChoo12" target="_blank">plus.google.com/+DavidChoo12</a>
-					</div>
-				</div>
-				<div id="li" class="card">
-					<div class="front face">
-						<img src="images/li.png"/>
-					</div>
-					<div class="back face center">
-						<a href="http://sg.linkedin.com/pub/david-choo" target="_blank">sg.linkedin.com/pub/david-choo</a>
-					</div>
-				</div>
-    		</div>
-    	</div>
+    	
     </main>
     <script type="text/javascript">
     	function displayNoForm() {

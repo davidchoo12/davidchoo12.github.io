@@ -9,17 +9,18 @@ main {
 	min-width: 678px;
 	/*max-width: 1078px;*/
 	/*height: 100%;*/
-	padding-top: 55px;
-	margin: 0 20px;
+	/*padding-top: 55px;*/
+	/*margin: 0 20px;*/
 	/*background-color: aliceblue;*/
 	/*margin-bottom: 50px;*/
 	/*box-shadow: 0 5px 5px -1px rgba(0, 0, 0, 0.2);*/
 }
 main .form-section {
+	padding-top: 55px;
 	width: 60%;
 	min-width: 478px;
 	max-width: 678px;
-	margin-left: 100px;
+	margin-left: 340px;
 	display: inline-block;
 }
 .form-section h1 {
@@ -59,33 +60,50 @@ main .form-section {
 	margin: 0 20px;
 	display: none;
 }
-main .social-section {
-	position: relative;
-	float: right;
-	width: auto;
-	width: 30%;
+.social-section {
+	position: fixed;
+	left: -280px;
+	background-color: aliceblue;
+	width: 260px;
+	padding: 55px 60px 10px 10px;
 	min-width: 178px;
 	max-width: 378px;
 	display: inline-block;
 	height: 100%;
-	/*background-color: white;*/
+	box-shadow: 5px 0px 5px #aaa;
+	transition: all 0.7s linear;
+}
+.social-section:hover {
+	left: 0;
+	padding-right: 10px;
+}
+#menu-icon {
+	position: absolute;
+	right: 0px;
+	top: 70px;
+	width: 50px;
 }
 #profile-image {
 	/*width: 100%;*/
 	height: 200px;
 	position: relative;
-	margin: 0 auto 20px auto;
+	margin: 0 auto 20px 0;
 	display: block;
+	z-index: 2;
+}
+.social-section p {
+	width: inherit;
 }
 .card {
   position: relative;
   margin: 10px auto;
-  width: 100%;
-  height: 60px;
+  width: 260px;
+  height: 40px;
   z-index: 1;
   transform-style: preserve-3d;
   transition: all 0.5s linear;
   box-shadow: 5px 5px 5px #aaa;
+  display: inline-block;
 }
 .card:hover {
   transform: rotateX(180deg);
