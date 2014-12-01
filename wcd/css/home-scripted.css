@@ -99,14 +99,13 @@
 	content: '';
 }
 .backgroundImg {
-	    position: absolute;
+	position: absolute;
     left: -9999px;
     right: -9999px;
     margin: 0 auto;
     min-width: 100%;
 	height: calc(155% + 20px);
 	top: -55%;
-	-webkit-filter: blur(1.5px);
 }
 .slide {
 	position: relative;
