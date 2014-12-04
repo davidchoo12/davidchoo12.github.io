@@ -122,7 +122,6 @@ main .form-section {
   box-sizing: border-box;
   color: white;
   text-align: center;
-  padding: auto 0;
 }
 .back a {
 	position: relative;

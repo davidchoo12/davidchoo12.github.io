@@ -24,6 +24,7 @@
 .backgroundImg {
 	position: absolute;
 	min-width: 100%;
+	height: 160%; /* fallback for browser without calc support */
 	height: calc(155% + 20px);
 	top: -55%;
     left: -9999px;
