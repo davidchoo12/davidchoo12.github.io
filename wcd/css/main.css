@@ -1,6 +1,11 @@
 html * {
 	-webkit-font-smoothing: antialiased;
 }
+html, body {
+	height: 100%;
+	color: #0c090a;
+	background-color: lemonchiffon;
+}
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -31,9 +36,7 @@ a {
 	font-family: "Source Sans Pro", adobe-clean;
 	font-size: 11vw;
 	font-weight: lighter;
-	/*font-family: Helvetica;*/
 	color: white;
-	-webkit-font-stretch: condensed;
 }
 .navBar {
 	height: 50px;
@@ -47,7 +50,6 @@ a {
 }
 .navBar ul {
 	display: inline-block;
-	/*background: inherit;*/
 	margin: 0;
 }
 .navBar li {
@@ -58,7 +60,6 @@ a {
 .navBar ul li a {
 	font-family: "Source Sans Pro", adobe-clean;
 	color: rgba(255,255,225, 0.7);
-	/*background-color: black;*/
 	font-size: 1.5em;
 	text-decoration: none;
 	display: block;
@@ -88,7 +89,6 @@ a {
 .navBar .social .social-link { 
 	background: url('../images/social-sprite-retina.png') no-repeat; 
 	background-size: auto 100px;
-	cursor: default;
 	display: inline-block; 
 	height: 36px; 
 	margin-left: 10px;
@@ -106,3 +106,14 @@ a {
 .navBar .social .share-email:hover { background-position: 0px -50px; }
 .navBar .social .share-twitter:hover { background-position: -50px -50px; }
 .navBar .social .share-facebook:hover { background-position: -100px -50px; }
+.navBar .social .share-icon {
+	background: url('../images/social-sprite-retina.png') no-repeat; 
+	background-size: auto 100px;
+	background-position: -150px 0px;
+	width: 26px;
+	height: 30px;
+	cursor: default;
+	display: inline-block;
+	margin-left: 26px;
+	vertical-align: middle;
+}

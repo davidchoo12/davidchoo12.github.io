@@ -1,13 +1,8 @@
-html, body {
-	height: 100%;
-}
 .scrollBtnContainer {
 	position: absolute;
 	left: 50%;
 	margin-left: -42px;
-	/*margin-right: auto;*/
 	bottom: 15%;
-	/*vertical-align: baseline;*/
 	height:40px;
 	display: inline;
 }
@@ -16,28 +11,15 @@ html, body {
 }
 .scrollBtn {
 	position: relative;
-	-webkit-animation-name: moveThis;
+	-webkit-animation-name: moveVertical;
 	-webkit-animation-duration:0.8s;
 	-webkit-animation-iteration-count:infinite;
 	-webkit-animation-timing-function:linear;
 }
-@-webkit-keyframes moveThis {
+@-webkit-keyframes moveVertical {
   0% {top:0;}
   50% {top:8px;}
   100% {top:0;}
-}
-.offscreen {
-	display: block;
-	left: -999999px;
-	position: absolute;
-	top: -999999px;
-}
-.before:before{
-	display: inline-block;
-	content: '';
-}
-.navBar .social .social-icon {
-	display: none;
 }
 .backgroundImg {
 	position: absolute;
@@ -55,7 +37,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 }
-.slide p, .slide ul {
+.slide p {
 	color: white;
 	font-family: "Helvetica";
 	font-size: 1.2em;
@@ -86,43 +68,4 @@ p .footnote {
 	opacity: 1;
 	padding: 0.5em;
 	display: block;
-}
-#part3 ul {
-	position: relative;
-	display: block;
-	background-color: rgba(0,0,0,0);
-	margin-top: 10px;
-	margin-bottom: 0px;
-}
-#part3 ul li {
-	width: 60%;
-	margin: 0px;
-	/*display: inline-block;*/
-}
-
-footer {
-	height: 40px;
-	background-color: black;
-	color: white;
-	text-align: center;
-	line-height: 40px;
-	font-family: "Helvetica", "Arial", sans-serif;
-	/*display: none;*/
-}
-#jsLibs {
-	float: right;
-	display: inline;
-	position: relative;
-	right: 0px;
-	/*width: 32%;*/
-	height: inherit;
-	/*background-color: rgba(255,255,255,0.5);*/
-}
-.jsLogo {
-	height: 30px;
-	vertical-align: middle;
-	margin-left: 5px;
-	-webkit-filter: blur(0px);
-	-webkit-filter: drop-shadow(1px 1px 1px #fff);
-	filter: drop-shadow(1px 1px 1px #fff);
 }

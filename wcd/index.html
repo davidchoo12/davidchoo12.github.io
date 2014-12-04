@@ -9,7 +9,7 @@
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 	  <link rel="stylesheet" type="text/css" href="css/home-noscript.css" />
-    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/animate.css" /> -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <script src="js/jquery-1.8.3.js"></script>
     <script src="js/jquery.lettering.js"></script>
@@ -18,8 +18,6 @@
     <script src="js/smoothscroll.js"></script>
     <script type="text/javascript">
     //<![CDATA[
-    //document.write("<link href='css/style-js.css' rel='styleSheet' type='text/css' />"); 
-    //is not legal in XHTML, we do the long way:
     var l=document.createElement("link");
     l.setAttribute("rel", "stylesheet");
     l.setAttribute("type", "text/css");
@@ -38,21 +36,18 @@
       </ul>
       <div class="social">
         <a class="social-link share-email" href="mailto:?subject=David%20Choo&amp;body=http://davidchoo12.github.io/wcd/">
-          Email
         </a>
         <a class="social-link share-twitter" href="https://twitter.com/intent/tweet?url=http://davidchoo12.github.io/wcd/&amp;via=davidchoo12" onclick="window.open(this.href,'targetWindow','width=600, height=400');return false;">
-          Twitter
         </a>
         <a class="social-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://davidchoo12.github.io/wcd/" onclick="window.open(this.href,'targetWindow','width=600, height=400');return false;">
-          Facebook
         </a>
-        <a href="#open-menu" class="before sprite-before social-icon"><span class="offscreen">Social</span></a>
+        <a class="share-icon"></a>
       </div>
     </nav>
   	<div id="part1" class="slide">
       <img src="images/part1bg.jpg" class="backgroundImg" data-anchor-target="#part1"/>
       <div class="titleContainer">
-        <span id="title" data-in-effect="fadeInLeft" data-out-effect="fadeOutRight">David Choo</span>
+        <span id="title" data-in-effect="fadeInLeft">David Choo</span>
       </div>
       <a id="scrollDown" class="scrollBtnContainer">
       	<img class="scrollBtn" src="images/scroll_btn.png" alt="Scroll To Bottom" />
