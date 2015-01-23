@@ -3,49 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <title></title>
-    <link href="animate.css" rel="stylesheet">
-    <script src="jquery-1.8.3.js"></script>
-  	<script src="jquery.lettering.js"></script>
-  	<script src="jquery.textillate.js"></script>
-  	<style type="text/css">
-    body {
-      background-image: url('bg.png');
-      background-repeat: repeat;
-    }
-    </style>
-    <script type="text/javascript">
-    $( document ).ready(function() {
-             $('.tlt').textillate({
-                 selector: '.texts',
-                 loop: true,
-                 minDisplayTime: 2000,
-                 initialDelay: 0,
-                 in: {
-                     effect: 'fadeInUp',
-                     delayScale: 2,
-                     delay: 50,
-                     sync: true,
-                     shuffle: false
-                 },
-                 out: {
-                     effect: 'fadeOutUp',
-                     delayScale: 2,
-                     delay: 50,
-                     sync: true,
-                     shuffle: false
-                 },
-                 autoStart: true
-             });
-         
-         });
-  //   var tid = setTimeout(mycode, 2000);
-  //   function mycode() {
-  //   $(".text").css('visibility', 'hidden');
-  //   $(".text").textillate('in');
-  //   // $("#text").textillate({out:{effect:'fadeOut',sync:true}});
-  //   setTimeout(mycode, 2000); // repeat myself
-  // }
-    </script>
+    <link href="css/animate.css" rel="stylesheet">
+    <script src="js/jquery-1.8.3.js"></script>
+  	<script src="js/jquery.lettering.js"></script>
+  	<script src="js/jquery.textillate.js"></script>
+    <script src="js/skrollr.min.js"></script>
+  	<link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
   </head>
   <body>
   	<div class="tlt">
@@ -61,6 +25,15 @@
         <li>ยินดีต้อนรับ</li>
       </ul>
     </div>
-  	
+    <section id="curtain">
+      <div class="splitting"></div>
+      <div class="splitting"></div>
+      <div class="splitting left"></div>
+      <div class="splitting right"></div>
+      <div class="splitting left"></div>
+      <div class="splitting right"></div>
+      <div class="splitting left"></div>
+      <div class="splitting right"></div>
+    </section>
   </body>
 </html>
