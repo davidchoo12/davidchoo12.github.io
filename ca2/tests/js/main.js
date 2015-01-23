@@ -27,7 +27,23 @@ $( document ).ready(function() {
    });
    //end textillate section
    //start skrollr section
-   var slidingDist = parseInt($(".splitting").css('width')) + 400;
+   var offset = 150;
+   var colours = ["violet", "indigo", "blue", "green", "yellow", "orange", "red", "black"];
+   var slideCount = colours.length;
+   var dist = offset * (slideCount - 1);
+   var tempDist = dist;
+   $(".splitting:nth-of-type(even)").each(function(index) {
+    // alert(index * 2);
+    $(".splitting:nth-of-type(" + (index+1)*2 + ")").css({'background-color':colours[index],'right':tempDist+'px'});
+    tempDist -= offset;
+   });
+   tempDist = dist;
+   $(".splitting:nth-of-type(odd)").each(function(index) {
+    // alert((index+1) * 2 - 1);
+    $(".splitting:nth-of-type(" + ((index+1)*2-1) + ")").css({'background-color':colours[index],'left':tempDist+'px'});
+    tempDist -= offset;
+   });
+   var slidingDist = parseInt($(".splitting").css('width')) + dist;
    $("#curtain").height(window.innerHeight * 3);
    $(".splitting:nth-of-type(even)").attr("data-0p-top", "-webkit-transform: translateX(0px)");
    $(".splitting:nth-of-type(even)").attr("data--300p-top", "-webkit-transform: translateX("+slidingDist+"px)");
@@ -36,6 +52,7 @@ $( document ).ready(function() {
    $(".splitting:nth-of-type(odd)").attr("data--300p-top", "-webkit-transform: translateX(-"+slidingDist+"px)");
    $(".splitting:nth-of-type(odd)").attr("data-anchor-target", "#curtain");
    skrollr.init();
+   //end skrollr section
 });
 //   var tid = setTimeout(mycode, 2000);
 //   function mycode() {
