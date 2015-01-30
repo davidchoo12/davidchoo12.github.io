@@ -1,9 +1,177 @@
 body {
-  background-image: url('../img/bg.png');
-  background-repeat: repeat;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+.nav {
+	height: auto;
+	width: 100%;
+	/*min-width: 1010px;*/
+	/*background: #0072bc;*//*
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow: 		0px 5px 5px 0px rgba(50, 50, 50, 0.75);*/
+	display: block;
+	z-index: 100;
+	position: fixed;
+	top: 0px;
+	text-align: right;
+	padding: 10px 0;
+}
+.colorFadeIn {
+	-webkit-animation: colorFadeInAnim 2s;
+	background: #0072bc;
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow: 		0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+}
+.colorFadeOut {-webkit-animation: colorFadeOutAnim 2s; background: rgba(0,0,0,0);}
+@-webkit-keyframes colorFadeInAnim {
+	from {background: rgba(0,0,0,0);}
+	to {
+		background: #0072bc;
+		-webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+		-moz-box-shadow:    0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+		box-shadow: 		0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+	}
+}
+@-webkit-keyframes colorFadeOutAnim {
+	from {
+		background: #0072bc;
+		-webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+		-moz-box-shadow:    0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+		box-shadow: 		0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+	}
+	to {background: rgba(0,0,0,0);}
+}
+	.nav-list {
+		display: inline-block;
+		margin: 0;
+		padding-right: 50px;
+	}
+		.nav-item {
+			display: inline-block;
+			list-style-type: none;
+			padding: 0 1em;
+			text-align: center;
+			width: 130px;
+		}
+			.nav-item a {
+				font-family: "Roboto Slab";
+				font-weight: 400;
+				color: rgba(255,255,225, 1);
+				font-size: 1.2em;
+				text-decoration: none;
+				/*text-align: center;*/
+				/*display: block;*/
+				overflow: visible;
+				line-height: 0em;
+				padding: 5px 10px;
+				box-sizing: border-box;
+				/*width: 130px;*/
+				border: 3px solid rgba(0,0,0,0);
+				/*border-radius: 25px;*/
+				transition: all 0.5s ease;
+			}
+			.nav-item a:hover {
+				background-color: white;
+				color: #0072bc;
+				border: 3px solid white;
+			}
+			.nav-item .current { border-top: 3px solid white; }
+.nav-mobile {
+	display: none; /*hide from browsers that dont support media queries*/
+	/*cursor: pointer;*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 98;/*
+	background: #0072bc;
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow: 		0px 3px 5px 0px rgba(50, 50, 50, 0.75);*/
+	text-indent: 56px;
+	font-family: 'Roboto Slab';
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 56px;
+	color: white;
+	height: 56px;
+	width: 100%;
+}
+	.hamburger-button {
+		position: absolute;
+		top: 4px;
+		left: 4px;
+		background: url(../img/hamburger.svg) no-repeat center center;
+		background-size: 24px 24px;
+		height: 48px;
+		width: 48px;
+		box-sizing: border-box;
+		border: 0;
+		cursor: pointer;
+	}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+	.nav {
+		width: auto;
+		height: 100%;
+		background: #0072bc;
+		left: -100%;
+		transition: left 0.5s ease;
+	}
+	.nav-item {
+		width: 100%;
+		display: block;
+		padding: 10px 0;
+		margin-left: -70px;
+	}
+	.nav-mobile {
+		display: block;
+	}
+	.nav-list {
+		/*display: none;*/
+		width: 150px;
+		padding: 0px 10px;
+		text-align: center;
+	}
+}
+.nav-active {
+	left: 0;
+	transition: left 0.5s ease;
+}
+	.nav-active .nav-list .nav-item {
+		margin-left: 0;
+		transition: margin-left 1.5s ease;
+	}
+.mask {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	background: rgba(0,0,0,0.5);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s linear;
+}
+.mask-visible {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+#progressBar {
+	position: absolute;
+	bottom: 0;
+	background-color: white;
+	width: 0%;
+	height: 2px;
+}
+section {
+	width: 100%;
+	/*height: 1280px;*/
 }
 .center {
 	position: fixed;
@@ -11,8 +179,11 @@ body {
 	left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/**************SECTION ONE********************/
 #logoAnim {
 	background-color: black;
+	background-attachment: fixed;
 	position: relative;
 	z-index: 5;
 	width: 100%;
@@ -22,6 +193,7 @@ body {
 	/*background-color: red;*/
 	text-align: right;
 	font-family: 'Quicksand';
+	font-weight: 300;
 	font-size: 120px;
 }
 #coverTop {
@@ -30,11 +202,52 @@ body {
 #coverBottom {
 	background-color: black;
 }
+.scrollBtnContainer {
+	position: fixed;
+	left: 50%;
+	bottom: 15%;
+	z-index: 200;
+	margin-left: -42px;
+	height:40px;
+	display: inline;
+	transition: opacity 0.5s ease;
+}
+.scrollBtnContainer:hover {
+	cursor: pointer;
+}
+.scrollBtn {
+	position: relative;
+	-webkit-animation-name: moveVertical;
+	-webkit-animation-duration:0.8s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+@-webkit-keyframes moveVertical {
+  0% {top:0;}
+  50% {top:8px;}
+  100% {top:0;}
+}
+.skrollable-between #scrollDown, #scrollUp {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+.skrollable-after ~ #scrollUp {
+	display: inline;
+	opacity: 1;
+	transition: opacity 0.5s ease;
+}
+/***********************SECTION TWO*********************/
 .tlt {
 	color: white;
 	font-family: Arial;
 	font-size: 30px;
 	z-index: 3;
+}
+#curtain {
+	background-image: url('../img/bg.jpg');
+	background-size: 5px 5px;
+	background-repeat: repeat;
 }
 .splitting {
 	width: 50%;
@@ -48,4 +261,17 @@ body {
 }
 .splitting:nth-of-type(odd) {
 	left: 0;
+}
+#face-bg {
+	height: 1280px;
+	background-image: url('../img/bg.jpg');
+	background-size: 5px 5px;
+	background-repeat: repeat;
+	/*background-attachment: fixed;*/
+}
+#faceimg {
+	position: fixed;
+	top: 10vmin;
+	right: 15vmin;
+	width: 45vmin;
 }
