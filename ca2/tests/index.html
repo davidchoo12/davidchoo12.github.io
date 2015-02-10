@@ -7,15 +7,16 @@
     <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,400' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href="css/animate.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-1.8.3.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-  	<script src="js/jquery.lettering.js"></script>
-  	<script src="js/jquery.textillate.js"></script>
-    <script src="js/skrollr.min.js"></script>
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+  	<script type="text/javascript" src="js/jquery.lettering.js"></script>
+  	<script type="text/javascript" src="js/jquery.textillate.js"></script>
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body id="skrollr-body">
     <nav class="nav-mobile">
@@ -31,26 +32,25 @@
       </ul>
       <div id="progressBar"></div>
     </nav>
-    <section id="logoAnim" data-emit-events>
+    <div class="mask"></div>
+    <section id="logoAnim" class="sc1-bg" data-emit-events>
       <!-- <img class="center" src="img/davidchoo.png"> -->
-      <span id="davi" class="logo center">davi</span>
-      <span id="hoo" class="logo center">hoo</span>
-      <span id="coverTop" class="logo center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-      <span id="coverBottom" class="logo center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-      <span id="D" class="logo center">d</span>
-      <span id="C" class="logo center">c</span>
+      <span id="davi" class="logo center unselectable">davi</span>
+      <span id="hoo" class="logo center unselectable">hoo</span>
+      <span id="coverTop" class="logo center unselectable sc1-bg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span id="coverBottom" class="logo center unselectable sc1-bg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span id="D" class="logo center unselectable">d</span>
+      <span id="C" class="logo center unselectable">c</span>
       <a id="scrollDown" class="scrollBtnContainer">
         <img class="scrollBtn" src="img/scroll_btn.png" alt="Scroll To Bottom" />
       </a>
     </section>
-  	<div class="tlt center" data-in-effect="fadeInUp" data-out-effect="fadeOutUp">
+  	<div class="tlt center unselectable" data-in-effect="fadeInUp" data-out-effect="fadeOutUp">
       <ul class="texts">
-        <li>Welcome</li>
-        <li>bienvenue</li>
+        <li>welcome</li>
         <li>selamat datang</li>
         <li>歓迎</li>
         <li>환영</li>
-        <li>वेलकम</li>
       </ul>
     </div>
     <section id="curtain">
@@ -62,21 +62,42 @@
       <div class="splitting"></div>
       <div class="splitting"></div>
       <div class="splitting"></div>
-      <!-- <div class="splitting"></div>
-      <div class="splitting"></div>
-      <div class="splitting"></div>
-      <div class="splitting"></div>
-      <div class="splitting"></div>
-      <div class="splitting"></div>
-      <div class="splitting"></div>
-      <div class="splitting"></div> -->
     </section>
     <section id="face-bg">
+      <div><h1>Welcome to David's website</h1><p>This website is a project for my Web Client Development as well as Digital Visual Design modules in Singapore Polytechnic. Besides serving as a project work, it also serves to display my abilities in designing and coding websites.</p></div>
       <img id="faceimg" src="img/face-bg.png"></img>
       <a id="scrollUp" class="scrollBtnContainer">
         <img class="scrollBtn" src="img/scroll_btn2.png" alt="Scroll To Top" />
       </a>
     </section>
-    <div class="mask"></div>
+    <!-- <section id="columns"> -->
+      <!-- <div class="col-wrapper"> -->
+        <div class="col">
+          <div class="box">
+            <h1>About Me</h1>
+            <p>Interested in my website (or me :p)? All you need to know about me is right here!</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="box">
+            <h1>My School Projects</h1>
+            <p>Want to know what I do? Or what Diplima in IT offer? Get a sample of my Year 1 projects right here!</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="box">
+            <h1>Contact Me!</h1>
+            <p>Job invitation? Chat? Well you came to the wrong place. Just kidding! You can offer a job or chat with me (please don't) if you don't mind sending through a feedback form.</p>
+          </div>
+        </div>
+      <!-- </div> -->
+      <!-- About Me
+      Interested in my website (or me :p)? All you need to know about me is right here! 
+      My School Projects
+      Want to know what I do? Or what Diplima in IT offer? Get a sample of my Year 1 projects right here!
+      Contact Me!
+      Job invitation? Chat? Well you came to the wrong place. Just kidding! You can offer a job or chat with me (please don't) if you don't mind sending through a feedback form.-->
+
+    <!-- </section> -->
   </body>
 </html>
