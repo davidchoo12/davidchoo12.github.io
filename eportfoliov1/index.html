@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>David Choo E-Portfolio - Home</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,700,300">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="js/jquery-1.8.3.js"></script>
+    <script src="js/jquery.lettering.js"></script>
+    <script src="js/jquery.textillate.js"></script>
+    <script src="js/skrollr.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+    var l=document.createElement("link");
+    l.setAttribute("rel", "stylesheet");
+    l.setAttribute("type", "text/css");
+    l.setAttribute("href", "css/home-scripted.css");
+    document.getElementsByTagName("head")[0].appendChild(l);
+    //]]>
+    </script>
+  </head>
+  <body id="skrollr-body">
+  	<nav id="navigationBar" class="navBar" data-bottom-bottom="background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7))" data-top-top="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.0))">
+      <ul class="block-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hackathons.html">Hackathons</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contactme.html">Contact Me</a></li>
+      </ul>
+      <div class="social">
+        <a class="social-link share-email" href="mailto:?subject=David%20Choo&amp;body=http://davidchoo12.github.io/wcd/">
+        </a>
+        <a class="social-link share-twitter" href="https://twitter.com/intent/tweet?url=http://davidchoo12.github.io/wcd/&amp;via=davidchoo12" onclick="window.open(this.href,'targetWindow','width=600, height=400');return false;">
+        </a>
+        <a class="social-link share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://davidchoo12.github.io/wcd/" onclick="window.open(this.href,'targetWindow','width=600, height=400');return false;">
+        </a>
+        <a class="share-icon"></a>
+      </div>
+    </nav>
+  	<div id="part1" class="slide">
+      <img src="images/part1bg.jpg" class="backgroundImg" data-anchor-target="#part1" alt="Fullscreen background 1" />
+      <div class="titleContainer">
+        <span id="title" data-in-effect="fadeInLeft">David Choo</span>
+      </div>
+      <a id="scrollDown" class="scrollBtnContainer">
+      	<img class="scrollBtn" src="images/scroll_btn.png" alt="Scroll To Bottom" />
+      </a>
+  	</div>
+  	<div id="part2" class="slide">
+      <img src="images/part2bg.jpg" class="backgroundImg" data-anchor-target="#part2" alt="Fullscreen background 2" />
+      <p><span class="heading">Welcome</span><br /><br />This webpage is an assignment for the Web Client Development course in Singapore Polytechnic. It also serves to share my experiences and reflections to attended hackathons (may be updated with more out-of-school activities). Hackathons are events where people meet to engage in collaborative computer programing (quoted from Google). This website also contains my e-resume. Furthermore, I hope my website can inspire future web designers and developers.<br /><br /><span class="footnote">Note: This page is created when I am a year 1 student in SP (17 year old). Curious on how I do it? Continue scrolling :)</span></p>
+  	</div>
+	  <div id="part3" class="slide">
+      <img src="images/part3bg.jpg" class="backgroundImg" data-anchor-target="#part3" alt="Fullscreen background 3" />
+      <p>My first time coding with HTML and CSS was way back during my secondary school. Back then, my teacher insisted on using just <b>notepad</b> to code and as a secondary student, I had no idea softwares like dreamweaver exists. Moreover, I remember I was taught of using the traditional and now obsolete table layout for web. Thinking back, it was quite a fun experience learning to code my very first language.<br />And who would have known... Now I am in poly and the skill actually proved useful.</p>
+      <a id="scrollUp" class="scrollBtnContainer">
+        <img class="scrollBtn" src="images/scroll_btn2.png" alt="Scroll To Top" />
+      </a>
+  	</div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+.animated {
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	   -moz-animation-fill-mode: both;
+	     -o-animation-fill-mode: both;
+	        animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-moz-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-moz-transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+}
+
+@-o-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-o-transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-o-transform: translateX(0);
+	}
+}
+
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+.fadeInLeft {
+	-webkit-animation-name: fadeInLeft;
+	-moz-animation-name: fadeInLeft;
+	-o-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+}
+.titleContainer {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 10%;
+	font-family: "Source Sans Pro", adobe-clean;
+	font-size: 11vw;
+	font-weight: 200;
+	color: white;
+	-webkit-font-stretch: condensed;
+}
+.scrollBtnContainer:hover {
+	cursor: pointer;
+}
+.navBar {
+	height: 50px;
+	width: 100%;
+	min-width: 1010px;
+	z-index: 100;
+	position: absolute;
+	top: auto;
+	bottom: 0px;
+}
+.navBar .social .social-link { 
+	background: url('../images/social-sprite-retina.png') no-repeat; 
+	background-size: auto 100px;
+	cursor: default;
+	display: inline-block; 
+	height: 36px; 
+	margin-left: 10px;
+	padding: 0px;
+	opacity: 0;
+	vertical-align: middle; 
+	width: 41px;
+	transition: opacity 1s; 
+	-webkit-transition: opacity 1s; 
+}
+.navBar .social.open .social-link,
+.navBar .social.clicked .social-link {
+	opacity: 1;
+	cursor: pointer;
+}
+.navBar .social .share-email { background-position: 0px 0px; }
+.navBar .social .share-twitter { background-position: -50px 0px; }
+.navBar .social .share-facebook { background-position: -100px 0px; }
+.navBar .social .share-email:hover { background-position: 0px -50px; }
+.navBar .social .share-twitter:hover { background-position: -50px -50px; }
+.navBar .social .share-facebook:hover { background-position: -100px -50px; }
+.navBar .social .social-link:nth-child(3) { transition-delay-delay: 0s; -webkit-transition-delay: 0s; }
+.navBar .social .social-link:nth-child(2) { transition-delay-delay: .15s; -webkit-transition-delay: .15s; }
+.navBar .social .social-link:nth-child(1) { transition-delay-delay: .25s; -webkit-transition-delay: .25s; }
