@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>David Choo's Website v2.0</title>
+    <link rel="icon" href="favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="js/navtoggle.js"></script>
+    <script type="text/javascript" src="js/school.js"></script>
+  </head>
+  <body>
+    <nav class="nav-mobile colorFadeIn">
+      <button class="hamburger-button"></button>
+      School Projects
+    </nav>
+    <nav id="navigationBar" class="nav colorFadeIn">
+      <img src="img/davidchoo.png" alt="logo">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="index.html" class="ghostbutton">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="ghostbutton">About</a></li>
+        <li class="nav-item"><a href="school.html" class="ghostbutton current">School Projects</a></li>
+        <li class="nav-item"><a href="contactme.html" class="ghostbutton">Contact Me</a></li>
+      </ul>
+      <div id="progressBar"></div>
+    </nav>
+    <div class="mask"></div>
+    <section id="projGallery">
+      <div class="container">
+        <ul class="projects">
+          <li onclick="scrollTo('#project1')">
+            <img src="img/school/proj1.jpg" alt="Project 1">
+            <div class="projDesc">
+              <h2>Treasure Hunt</h2>
+              <p>Java Assignment</p>
+            </div>
+          </li>
+          <li onclick="scrollTo('#project2')">
+            <img src="img/school/proj2.jpg" alt="Project 2">
+            <div class="projDesc">
+              <h2>E-Portfolio 1</h2>
+              <p>WCD CA1</p>
+            </div>
+          </li>
+          <li onclick="scrollTo('#project3')">
+            <img src="img/school/proj3.jpg" alt="Project 3">
+            <div class="projDesc">
+              <h2>Big 2</h2>
+              <p>APPD CA1 and 2</p>
+            </div>
+          </li>
+          <li onclick="scrollTo('#project4')">
+            <img src="img/school/proj4.jpg" alt="Project 4">
+            <div class="projDesc">
+              <h2>This website</h2>
+              <p>WCD CA2</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="project1" class="projectsect">
+      <div class="container">
+        <div class="section-title">
+          <h1>Treasure Hunt</h1>
+          <span class="border"></span>
+          <h2>Java using JFrame</h2>
+        </div>
+        <div class="section-details">
+          <img src="img/school/proj1.jpg" alt="Project 1">
+          <p>The Java Programming module I took requires us to create a mini game using JFrame. This project is done in pairs and my partner is Cassey. I slightly modified the game play which initially was utterly meaningless luck-based game, to a memory testing game.</p><br>
+          <p>Grade: Distinction</p><br>
+          <a class="ghostbutton dlBtn" href="https://www.dropbox.com/s/xl935aa1b323qio/game.zip?dl=0" target="_blank">Download Game</a>
+          <a class="ghostbutton dlscBtn" href="https://www.dropbox.com/s/397nmrcfra9uwak/source.zip?dl=0" target="_blank">Source Code</a>
+        </div>
+      </div>
+    </section>
+    <section id="project2" class="projectsect">
+      <div class="container">
+        <div class="section-title">
+          <h1>E-Portfolio 1</h1>
+          <span class="border"></span>
+          <h2>HTML, CSS, JQuery using skrollr and textillate plugins</h2>
+        </div>
+        <div class="section-details">
+          <img src="img/school/proj2.jpg" alt="Project 2">
+          <p>I made this webpage for the Web Client Development module. When I started, I totally know nothing of JavaScript. So I had to start ground zero. Although the requirement does not cover Javascript, I just feel like expanding my web development skills by picking it up.</p><br>
+          <p>Grade: A (unconfirmed to be Distinction)</p><br>
+          <a class="ghostbutton dlBtn" href="http://davidchoo12.github.io/eportfoliov1/" target="_blank">Visit</a>
+          <a class="ghostbutton dlscBtn" href="https://www.dropbox.com/s/ssw995bqqxvt0nk/source.zip?dl=0" target="_blank">Source Code</a>
+        </div>
+      </div>
+    </section>
+    <section id="project3" class="projectsect">
+      <div class="container">
+        <div class="section-title">
+          <h1>Big Two</h1>
+          <span class="border"></span>
+          <h2>C# with Windows Form</h2>
+        </div>
+        <div class="section-details">
+          <img src="img/school/proj3.jpg" alt="Project 3">
+          <p>This game is made for the Application Development module. It requires us to code out a functional card game with Windows Form. The recommended card game was Uno which has slightly simpler game logic than Big Two. I picked Big Two because I had experience playing it and less for Uno. The project took me a total of 3 weeks for the core gameplay and 3 days for the database implementation and additional features.</p><br><br>
+          <p>Grade: To be announced</p><br>
+          <a class="ghostbutton dlBtn" href="https://www.dropbox.com/s/c9k6wb3klhj4k72/game.zip?dl=0" target="_blank">Download Game</a>
+          <a class="ghostbutton dlscBtn" href="https://www.dropbox.com/s/egmatpv1ech5tvt/source.zip?dl=0" target="_blank">Source Code</a>
+        </div>
+      </div>
+    </section>
+    <section id="project4" class="projectsect">
+      <div class="container">
+        <div class="section-title">
+          <h1>THIS</h1>
+          <span class="border"></span>
+          <h2>HTML CSS JQuery with skrollr and textillate</h2>
+        </div>
+        <div class="section-details">
+          <img src="img/school/proj4.jpg" alt="Project 4">
+          <p>If you have seen the home page, you should have known what purpose this website serves. I really love parallax scrolling websites, thus the first version of my E-portfolio. If you are curious how it is done, you can always press F12 to launch the developer tools and analyse my code.</p><br>
+          <p>Grade: To be announced</p><br>
+          <a class="ghostbutton dlscBtn" href="https://www.dropbox.com/s/z4mxvf63zvts234/source.zip?dl=0" target="_blank">Source Code</a><br><br>
+          <p>The video below is a screen recording of my progress with coding this website.</p>
+          <video width="320" height="240" controls>
+            <source src="vid/full.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+          <!--also works with iframe (embeded video from google drive), but requires internet connection and css styling-->
+          <!--
+            <iframe src="https://drive.google.com/file/d/0B3s3ZU9_TZdieUpKeE1yUWZrTFk/preview" width="640" height="480"></iframe>
+          -->
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
