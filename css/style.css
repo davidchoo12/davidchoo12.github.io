@@ -489,7 +489,7 @@ can be replaced in the future with other images to have different effects such a
 }
 .projectsect:nth-child(odd) img { float: left; }
 .projectsect:nth-child(even) img { float: right; }
-.section-details video {
+.section-details iframe {
 	display: block;
 	margin: 0 auto;
 	width: 691.2px;
@@ -641,6 +641,13 @@ textarea {
 		}
 		to {background: rgba(0,0,0,0);}
 	}
+	.nav .social {
+		top: 0;
+		position: relative;
+	}
+	.nav .social .social-link {
+		display: inline-block;
+	}
 /*home page*/
 	#face-bg {
 		height: auto;
@@ -688,8 +695,9 @@ textarea {
 		margin: 0 0 40px 5%;
 	}
 	.projectsect:nth-child(odd) .dlBtn {margin-left: 5%;}
-	.section-details video {
+	.section-details iframe {
 		width: 90%;
+		height: 232.875px;
 	}
 /*Contact ME page*/
 	.cb-wrapper {display: block;}
@@ -720,7 +728,8 @@ textarea {
 		margin: 0 0 40px 5%;
 	}
 	.projectsect:nth-child(odd) .dlBtn {margin-left: 5%;}
-	.section-details video {
+	.section-details iframe {
 		width: 90%;
+		height: 303.75px;
 	}
 }
